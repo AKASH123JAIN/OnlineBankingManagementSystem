@@ -1,0 +1,100 @@
+<html>
+    <head>
+   
+        <SCRIPT LANGUAGE="JavaScript">
+function dil(form)
+{
+   for(var i=0; i<form.elements.length; i++)
+   {
+		if(form.elements[i].value == "")
+		{
+		   alert("Fill out all Fields");
+		   document.F1.accountno.focus();
+		   return false;
+		}
+   }
+
+   if(isNaN(document.F1.accountno.value))
+   {
+       alert("Accountno must  be  number & can't be null");
+	   document.F1.accountno.value="";
+	   document.F1.accountno.focus();
+	   return false;
+   }
+   if(!isNaN(document.F1.username.value))
+   {
+       alert("User Name  must  be  char's & can't be null");
+	   document.F1.username.value="";
+	   document.F1.username.focus();
+	   return false;
+   }
+
+   if(!isNaN(document.F1.password.value))
+   {
+       alert("Password  must  be  char's & can't be null");
+	   document.F1.password.value="";
+	   document.F1.password.focus();
+	   return false;
+   }
+   
+   return true  ; 
+}      
+    function abc()
+          {
+            var pass=document.frm.password.value;
+            var cpass=document.frm.repassword.value;
+            if(pass!=cpass)
+            {
+                alert("password and confirm password must be same");
+                return false;
+            }
+            return true;
+          }    
+        
+        </script>
+            
+            
+        
+    </head>
+    
+    <body>
+        <form   name="frm" onsubmit=return(abc()) action="cs">
+            <table>
+                <center>Register Form</center       
+                <tr><th> Account Number</th>
+                    <td><Input type="text" name="account" placeholder="enter account number" required="required"></td></tr>
+                <tr>
+                    <th>User Name</th>
+                <td><Input type="text" name="username"required="required"></td>
+                </tr>
+                
+       <tr>        
+           <th>Password</th>
+           <td><Input type="text" name="password"required="required"></td>
+       </tr>
+       <tr><th>Confirm Password</th>
+           <td><Input type="text" name="repassword"required="required"></td>
+       </tr>
+       <tr><th>Amount</th>
+           <td><Input type="text" name="amount"required="required"></td>
+       </tr>
+       <tr><th> Address</th>
+           <td><Input type="text" name="address"required="required"></td>
+       </tr>
+       <tr><th>Phone</th>
+           <td><Input type="text" name="phone"required="required"></td>
+       </tr>
+       <tr><td>
+               <input type="submit" value="Register"required="required" >
+           </td>
+       </tr>
+            </table>
+        </form>
+    </body>
+</html>
+        
+   
+    
+    
+    
+    
